@@ -10,7 +10,7 @@ pipeline{
 
     stage('Koyeb Setup and Deploy Job'){
       steps{
-        sh 'apt install curl'
+        // sh 'apt install curl' #Remove comment if curl is not installed on host system
         sh 'curl -fsSL https://raw.githubusercontent.com/koyeb/koyeb-cli/master/install.sh | sh'
         sh 'export PATH=$HOME/.koyeb/bin:$PATH'
         sh 'export KOYEB_TOKEN=$KOYEB_API_TOKEN'
